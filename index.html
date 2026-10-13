@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///C:/Users/Acer/Downloads/ucapan_ulang_tahun_dengan_foto.html -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun 🎂</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: white;
+            background:
+                radial-gradient(circle at top, #FFB5F9 9%, transparent 35%),
+                linear-gradient(135deg, #1a1033, #32145f, #701c52);
+        }
+
+        /* Bintang */
+        .stars {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px white;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from { opacity: .2; transform: scale(.7); }
+            to { opacity: 1; transform: scale(1.4); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 70px 20px;
+        }
+
+        .badge {
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.25);
+            padding: 8px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            font-size: 150px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: clamp(45px, 10vw, 90px);
+            line-height: 1;
+            background: linear-gradient(90deg, #fff, #ffd1e1, #ff7eb3);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 10px 30px rgba(255,100,180,.2);
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .subtitle {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 19px;
+            color: #fbddea;
+            max-width: 650px;
+        }
+
+        .cake {
+            font-size: 100px;
+            margin: 35px 0 20px;
+            animation: cake 2s infinite;
+            filter: drop-shadow(0 0 20px rgba(255,180,210,.5));
+        }
+
+        @keyframes cake {
+            0%,100% { transform: scale(1) rotate(-2deg); }
+            50% { transform: scale(1.08) rotate(2deg); }
+        }
+
+        /* Foto orang yang dituju */
+        .profile-photo {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 10px 0 25px;
+            border: 5px solid rgba(255,255,255,.75);
+            box-shadow:
+                0 0 0 8px rgba(255,143,188,.15),
+                0 15px 45px rgba(0,0,0,.35),
+                0 0 35px rgba(255,126,179,.45);
+            animation: photoFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes photoFloat {
+            0%,100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-7px) scale(1.02); }
+        }
+
+        .photo-caption {
+            margin-top: -10px;
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #ffe1ed;
+            letter-spacing: 1px;
+        }
+
+        .card {
+            width: min(850px, 100%);
+            margin-top: 30px;
+            padding: 40px;
+            border-radius: 30px;
+            background: rgba(255,255,255,.10);
+            border: 1px solid rgba(255,255,255,.2);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 25px 70px rgba(0,0,0,.3);
+            text-align: center;
+        }
+
+        .typing {
+            min-height: 80px;
+            font-size: 22px;
+            line-height: 1.7;
+            color: #fff1f7;
+        }
+
+        .cursor {
+            animation: blink .7s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .divider {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ff8fbc, transparent);
+            margin: 30px auto;
+        }
+
+        .quotes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            width: min(1000px, 100%);
+            margin-top: 35px;
+        }
+
+        .quote {
+            padding: 25px;
+            border-radius: 22px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.15);
+            backdrop-filter: blur(12px);
+            transition: .4s;
+        }
+
+        .quote:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,.14);
+            box-shadow: 0 15px 35px rgba(255,100,180,.18);
+        }
+
+        .quote span {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .quote p {
+            color: #f9dce9;
+            line-height: 1.7;
+        }
+
+        button {
+            margin-top: 35px;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            background: linear-gradient(135deg, #ff4f9a, #a855f7);
+            box-shadow: 0 10px 30px rgba(255,70,150,.3);
+            transition: .3s;
+        }
+
+        button:hover {
+            transform: scale(1.07);
+            box-shadow: 0 15px 40px rgba(255,70,150,.5);
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #dcbccc;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Hati */
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 20px;
+            animation: rise linear forwards;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 0;
+            }
+            15% { opacity: 1; }
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            top: -20px;
+            width: 10px;
+            height: 15px;
+            z-index: 10;
+            animation: fall 3s linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+            }
+        }
+
+        @media(max-width:600px) {
+            .card {
+                padding: 25px 18px;
+            }
+
+            .typing {
+                font-size: 18px;
+            }
+
+            .cake {
+                font-size: 75px;
+            }
+
+            .profile-photo {
+                width: 145px;
+                height: 145px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"><div class="star" style="left: 17.0659%; top: 65.9282%; animation-delay: 2.64726s;"></div><div class="star" style="left: 92.0171%; top: 6.69392%; animation-delay: 0.0354962s;"></div><div class="star" style="left: 7.20711%; top: 57.6801%; animation-delay: 2.11343s;"></div><div class="star" style="left: 34.267%; top: 33.131%; animation-delay: 0.197795s;"></div><div class="star" style="left: 56.5143%; top: 44.9313%; animation-delay: 0.456249s;"></div><div class="star" style="left: 53.0082%; top: 51.2383%; animation-delay: 0.449039s;"></div><div class="star" style="left: 19.5483%; top: 96.7933%; animation-delay: 1.23695s;"></div><div class="star" style="left: 8.2461%; top: 28.5019%; animation-delay: 2.3367s;"></div><div class="star" style="left: 54.9541%; top: 15.7781%; animation-delay: 2.0847s;"></div><div class="star" style="left: 28.546%; top: 56.9344%; animation-delay: 0.0657955s;"></div><div class="star" style="left: 27.03%; top: 62.3387%; animation-delay: 2.99403s;"></div><div class="star" style="left: 20.4148%; top: 26.7811%; animation-delay: 0.881126s;"></div><div class="star" style="left: 38.8698%; top: 93.3802%; animation-delay: 1.89652s;"></div><div class="star" style="left: 16.5931%; top: 59.6038%; animation-delay: 1.47537s;"></div><div class="star" style="left: 61.7262%; top: 63.6057%; animation-delay: 0.711071s;"></div><div class="star" style="left: 82.9677%; top: 55.2018%; animation-delay: 1.36798s;"></div><div class="star" style="left: 88.8616%; top: 54.8959%; animation-delay: 0.594444s;"></div><div class="star" style="left: 84.5105%; top: 40.6931%; animation-delay: 2.83234s;"></div><div class="star" style="left: 24.2567%; top: 45.9012%; animation-delay: 0.269185s;"></div><div class="star" style="left: 33.4545%; top: 47.5032%; animation-delay: 1.30177s;"></div><div class="star" style="left: 96.3308%; top: 8.60111%; animation-delay: 2.98282s;"></div><div class="star" style="left: 37.7395%; top: 55.1035%; animation-delay: 1.7619s;"></div><div class="star" style="left: 77.2675%; top: 15.1211%; animation-delay: 0.0993131s;"></div><div class="star" style="left: 43.2617%; top: 58.9236%; animation-delay: 2.72188s;"></div><div class="star" style="left: 31.2631%; top: 51.6194%; animation-delay: 0.88839s;"></div><div class="star" style="left: 9.24876%; top: 17.6237%; animation-delay: 1.64644s;"></div><div class="star" style="left: 50.0057%; top: 10.995%; animation-delay: 2.6813s;"></div><div class="star" style="left: 50.1273%; top: 54.0402%; animation-delay: 1.58385s;"></div><div class="star" style="left: 77.4062%; top: 58.5684%; animation-delay: 1.80091s;"></div><div class="star" style="left: 45.3964%; top: 58.3321%; animation-delay: 2.3731s;"></div><div class="star" style="left: 34.5725%; top: 80.2227%; animation-delay: 0.967047s;"></div><div class="star" style="left: 19.9446%; top: 55.8437%; animation-delay: 0.514997s;"></div><div class="star" style="left: 20.1086%; top: 28.6184%; animation-delay: 2.15233s;"></div><div class="star" style="left: 2.00958%; top: 68.358%; animation-delay: 0.650541s;"></div><div class="star" style="left: 39.5919%; top: 9.91543%; animation-delay: 0.224255s;"></div><div class="star" style="left: 17.9304%; top: 2.64762%; animation-delay: 1.00764s;"></div><div class="star" style="left: 26.1403%; top: 69.6711%; animation-delay: 0.408886s;"></div><div class="star" style="left: 36.6642%; top: 49.4224%; animation-delay: 1.40429s;"></div><div class="star" style="left: 27.1164%; top: 10.6566%; animation-delay: 1.56192s;"></div><div class="star" style="left: 17.4843%; top: 77.5156%; animation-delay: 1.61837s;"></div><div class="star" style="left: 79.3028%; top: 26.8005%; animation-delay: 2.30409s;"></div><div class="star" style="left: 62.5973%; top: 50.4787%; animation-delay: 0.619307s;"></div><div class="star" style="left: 0.749687%; top: 47.4267%; animation-delay: 0.464004s;"></div><div class="star" style="left: 72.7532%; top: 95.2117%; animation-delay: 2.51932s;"></div><div class="star" style="left: 56.6014%; top: 26.2225%; animation-delay: 2.82863s;"></div><div class="star" style="left: 73.0972%; top: 42.7792%; animation-delay: 0.0652327s;"></div><div class="star" style="left: 28.3436%; top: 12.2171%; animation-delay: 1.14366s;"></div><div class="star" style="left: 24.2629%; top: 72.4436%; animation-delay: 1.67942s;"></div><div class="star" style="left: 15.3901%; top: 32.2577%; animation-delay: 2.7435s;"></div><div class="star" style="left: 92.5622%; top: 35.2243%; animation-delay: 0.960097s;"></div><div class="star" style="left: 65.8496%; top: 23.3764%; animation-delay: 1.24273s;"></div><div class="star" style="left: 96.4845%; top: 36.5299%; animation-delay: 0.924044s;"></div><div class="star" style="left: 11.3458%; top: 28.2872%; animation-delay: 1.22551s;"></div><div class="star" style="left: 54.5756%; top: 65.2645%; animation-delay: 0.945858s;"></div><div class="star" style="left: 69.8555%; top: 71.02%; animation-delay: 1.28765s;"></div><div class="star" style="left: 55.4227%; top: 20.0598%; animation-delay: 1.94721s;"></div><div class="star" style="left: 17.4227%; top: 50.422%; animation-delay: 1.21859s;"></div><div class="star" style="left: 69.8716%; top: 45.4723%; animation-delay: 2.60301s;"></div><div class="star" style="left: 50.1782%; top: 2.3197%; animation-delay: 2.95766s;"></div><div class="star" style="left: 31.088%; top: 41.7124%; animation-delay: 2.146s;"></div><div class="star" style="left: 86.8151%; top: 78.2658%; animation-delay: 2.22459s;"></div><div class="star" style="left: 36.1821%; top: 1.87674%; animation-delay: 1.08648s;"></div><div class="star" style="left: 69.1072%; top: 0.865529%; animation-delay: 1.57441s;"></div><div class="star" style="left: 77.7726%; top: 34.7936%; animation-delay: 0.135465s;"></div><div class="star" style="left: 16.013%; top: 8.69665%; animation-delay: 1.40204s;"></div><div class="star" style="left: 82.1362%; top: 10.8843%; animation-delay: 1.37169s;"></div><div class="star" style="left: 61.2138%; top: 30.4171%; animation-delay: 0.519289s;"></div><div class="star" style="left: 17.6168%; top: 82.0956%; animation-delay: 2.7161s;"></div><div class="star" style="left: 21.1006%; top: 42.9446%; animation-delay: 2.29204s;"></div><div class="star" style="left: 71.1947%; top: 60.0301%; animation-delay: 0.823639s;"></div><div class="star" style="left: 79.1784%; top: 94.8232%; animation-delay: 0.325225s;"></div><div class="star" style="left: 26.785%; top: 7.78847%; animation-delay: 0.138075s;"></div><div class="star" style="left: 54.1153%; top: 54.903%; animation-delay: 0.41546s;"></div><div class="star" style="left: 64.3613%; top: 24.23%; animation-delay: 0.918218s;"></div><div class="star" style="left: 53.9982%; top: 86.5763%; animation-delay: 0.913981s;"></div><div class="star" style="left: 30.5969%; top: 44.1989%; animation-delay: 1.94427s;"></div><div class="star" style="left: 6.94483%; top: 4.12806%; animation-delay: 1.04036s;"></div><div class="star" style="left: 51.0176%; top: 6.69444%; animation-delay: 0.649563s;"></div><div class="star" style="left: 45.5993%; top: 20.3077%; animation-delay: 1.61328s;"></div><div class="star" style="left: 98.796%; top: 56.5396%; animation-delay: 0.425615s;"></div><div class="star" style="left: 36.5114%; top: 64.3089%; animation-delay: 1.48699s;"></div><div class="star" style="left: 90.269%; top: 27.2205%; animation-delay: 1.95967s;"></div><div class="star" style="left: 51.5132%; top: 62.2049%; animation-delay: 2.50823s;"></div><div class="star" style="left: 31.7463%; top: 42.52%; animation-delay: 2.76782s;"></div><div class="star" style="left: 13.1587%; top: 34.2162%; animation-delay: 2.93691s;"></div><div class="star" style="left: 48.2314%; top: 15.1266%; animation-delay: 2.89542s;"></div><div class="star" style="left: 89.905%; top: 84.4225%; animation-delay: 0.256929s;"></div><div class="star" style="left: 26.4751%; top: 79.9193%; animation-delay: 2.91381s;"></div><div class="star" style="left: 83.7137%; top: 99.4255%; animation-delay: 1.78257s;"></div><div class="star" style="left: 9.81495%; top: 79.5337%; animation-delay: 1.28948s;"></div><div class="star" style="left: 84.6181%; top: 14.8559%; animation-delay: 0.311931s;"></div><div class="star" style="left: 43.0303%; top: 93.7012%; animation-delay: 2.33855s;"></div><div class="star" style="left: 84.0126%; top: 27.7986%; animation-delay: 2.74467s;"></div><div class="star" style="left: 50.1641%; top: 45.8165%; animation-delay: 0.132829s;"></div><div class="star" style="left: 59.3932%; top: 91.3818%; animation-delay: 0.699098s;"></div><div class="star" style="left: 16.4765%; top: 55.2772%; animation-delay: 2.25392s;"></div><div class="star" style="left: 91.4697%; top: 40.7912%; animation-delay: 0.221413s;"></div><div class="star" style="left: 76.89%; top: 38.6101%; animation-delay: 0.445087s;"></div><div class="star" style="left: 38.9279%; top: 39.3818%; animation-delay: 1.75998s;"></div><div class="star" style="left: 73.3939%; top: 0.792791%; animation-delay: 0.887013s;"></div></div>
+
+<div class="container">
+
+    <div class="badge">✨ A SPECIAL DAY ✨</div>
+
+    <h1>Happy Anniversary!</h1>
+
+    <p class="subtitle">
+        Hari ini bukan sekadar hari biasa,
+        tetapi bertambahnya cerita kebahagiaan
+        dan kesedihan yang sudah kita lalui bersama.
+    </p>
+
+       <img src="./ucapan_ulang_tahun_dengan_foto_files/foto.jpg" alt="Foto orang yang dituju" class="profile-photo">
+
+    <div class="photo-caption">Fatay Rusda Aulia</div>
+
+    <div class="cake">🤍</div>
+
+    <div class="card">
+        <div class="typing" id="typing">Selamat ulang tahun! 🎉 Semoga di usia yang baru ini, semua doa baik perlahan menemukan jalannya. Semoga kamu selalu dikelilingi orang-orang yang tulus, diberi kesehatan, kebahagiaan, dan keberanian untuk mengejar semua impianmu.</div>
+
+        <div class="divider"></div>
+
+        <p style="color:#fbddea; line-height:1.8;">
+            Semoga setiap langkahmu dipenuhi keberanian,
+            setiap harimu dipenuhi kebahagiaan,
+            dan setiap impianmu menemukan jalannya untuk menjadi nyata.
+        </p>
+
+        <button onclick="celebrate()">
+            🎉 Klik untuk Kejutan
+        </button>
+    </div>
+
+    <div class="quotes">
+
+        <div class="quote">
+            <span>🌷</span>
+            <p>
+                "Tidak perlu menjadi sempurna untuk menjadi luar biasa.
+                Cukup terus bertumbuh menjadi versi terbaik dari dirimu."
+            </p>
+        </div>
+
+        <div class="quote">
+            <span>🌙</span>
+            <p>
+                "Hidup bukan tentang seberapa cepat kita sampai,
+                tetapi tentang seberapa banyak keindahan yang kita temukan
+                sepanjang perjalanan."
+            </p>
+        </div>
+
+        <div class="quote">
+            <span>✨</span>
+            <p>
+                "Jangan takut bermimpi besar.
+                Dunia membutuhkan orang-orang yang berani percaya
+                bahwa sesuatu yang indah bisa terjadi."
+            </p>
+        </div>
+
+        <div class="quote">
+            <span>💖</span>
+            <p>
+                "Semoga usia baru membawa lebih banyak alasan untuk tersenyum,
+                lebih sedikit alasan untuk menyerah,
+                dan banyak hal yang layak disyukuri."
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        Di buat oleh Berdila Yoshe Inasa yang cantik😝
+    </footer>
+
+</div>
+
+<script>
+
+    /* Membuat bintang secara otomatis */
+    const stars = document.getElementById("stars");
+
+    for(let i = 0; i < 100; i++){
+        const star = document.createElement("div");
+
+        star.className = "star";
+
+        star.style.left = Math.random() * 100 + "%";
+        star.style.top = Math.random() * 100 + "%";
+
+        star.style.animationDelay = Math.random() * 3 + "s";
+
+        stars.appendChild(star);
+    }
+
+
+    /* Jika foto tidak ditemukan, tampilkan placeholder */
+    const profilePhoto = document.querySelector(".profile-photo");
+    profilePhoto.addEventListener("error", function(){
+        this.style.display = "none";
+        document.querySelector(".photo-caption").textContent =
+            "📷 Tambahkan file foto.jpg untuk menampilkan foto";
+    });
+
+    /* Efek tulisan */
+    const message =
+        "Selamat ulang tahun! 🎉 Semoga di usia yang baru ini, semua doa baik perlahan menemukan jalannya. Semoga kamu selalu dikelilingi orang-orang yang tulus, diberi kesehatan, kebahagiaan, dan keberanian untuk mengejar semua impianmu.";
+
+    const typing = document.getElementById("typing");
+
+    let index = 0;
+
+    function typeWriter(){
+
+        if(index < message.length){
+
+            typing.innerHTML =
+                message.substring(0,index + 1) +
+                '<span class="cursor">|</span>';
+
+            index++;
+
+            setTimeout(typeWriter, 45);
+
+        } else {
+
+            typing.innerHTML = message;
+        }
+    }
+
+    typeWriter();
+
+
+    /* Efek hati terbang */
+    function createHeart(){
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        const hearts = ["❤️","💖","💕","💗","💓","✨"];
+
+        heart.innerHTML =
+            hearts[Math.floor(Math.random() * hearts.length)];
+
+        heart.style.left = Math.random() * 100 + "%";
+
+        heart.style.animationDuration =
+            (4 + Math.random() * 5) + "s";
+
+        heart.style.fontSize =
+            (15 + Math.random() * 20) + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 9000);
+    }
+
+    setInterval(createHeart, 700);
+
+
+    /* Tombol kejutan */
+    function celebrate(){
+
+        // Confetti
+        for(let i = 0; i < 120; i++){
+
+            const confetti = document.createElement("div");
+
+            confetti.className = "confetti";
+
+            const colors = [
+                "#ff4f9a",
+                "#ffd166",
+                "#06d6a0",
+                "#118ab2",
+                "#a855f7",
+                "#ffffff"
+            ];
+
+            confetti.style.background =
+                colors[Math.floor(Math.random() * colors.length)];
+
+            confetti.style.left =
+                Math.random() * 100 + "%";
+
+            confetti.style.animationDuration =
+                (2 + Math.random() * 3) + "s";
+
+            confetti.style.transform =
+                `rotate(${Math.random() * 360}deg)`;
+
+            document.body.appendChild(confetti);
+
+            setTimeout(() => confetti.remove(), 5000);
+        }
+
+        alert("🎉 Selamat ulang tahun! Semoga semua impianmu menjadi kenyataan! ❤️");
+    }
+
+</script>
+
+
+<div class="heart" style="left: 49.9105%; animation-duration: 7.79635s; font-size: 25.3756px;">💗</div><div class="heart" style="left: 29.3751%; animation-duration: 7.79513s; font-size: 30.1326px;">💖</div><div class="heart" style="left: 72.5768%; animation-duration: 8.34641s; font-size: 31.9487px;">💓</div><div class="heart" style="left: 26.1452%; animation-duration: 7.62107s; font-size: 19.3835px;">💗</div><div class="heart" style="left: 8.66667%; animation-duration: 4.22685s; font-size: 27.5414px;">💖</div><div class="heart" style="left: 89.1422%; animation-duration: 5.00701s; font-size: 31.9002px;">✨</div><div class="heart" style="left: 14.8658%; animation-duration: 4.92621s; font-size: 16.0269px;">💖</div><div class="heart" style="left: 67.6131%; animation-duration: 5.79626s; font-size: 17.061px;">💖</div><div class="heart" style="left: 83.7424%; animation-duration: 8.85614s; font-size: 22.7123px;">❤️</div><div class="heart" style="left: 88.958%; animation-duration: 4.19912s; font-size: 18.9264px;">❤️</div><div class="heart" style="left: 99.2261%; animation-duration: 4.6127s; font-size: 33.5152px;">💕</div><div class="heart" style="left: 63.5515%; animation-duration: 5.6505s; font-size: 24.7953px;">💗</div></body></html>
